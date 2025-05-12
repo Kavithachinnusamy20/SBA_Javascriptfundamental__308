@@ -232,10 +232,14 @@ function getLearnerData(course, ag, submissions) {
 
 
 
-const result = getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions);
-
-
-console.log(result);
+try {
+    const result = getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions);
+    console.log(result);
+} catch (error) {
+    console.log("Error message :" + error);
+} finally {
+    console.log("Finally block");
+}
 
 
 // here, we would process this data to achieve the desired result.
